@@ -1,0 +1,57 @@
+svg {
+  position: center;
+  width: 600px;
+  height: 600px;
+}
+
+
+mark { 
+    background-color: red;
+    color: black;
+}
+
+#networkgraph {
+  position: absolute; 
+  top:0;
+  height: 1000px;
+}
+
+#graph {
+  position: absolute; 
+  top:0;
+  right: 0;   
+  z-index:4;
+  width: 100%;
+  height: 100%;
+  border: 1px; 
+}
+
+ 
+ul {
+  list-style-type: none;
+}
+ 
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+ 
+li img {
+  float: left;
+  height: 60px;
+  width: 60px;
+  margin: 15px 15px 15px 15px;
+}
+ 
+li p {
+  font: 200 18px/1.5, bold, serif;
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+}
+ 
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
