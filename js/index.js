@@ -18,7 +18,7 @@
 
 
   socket.on('historic_data', function (data) {
-       console.log("Historic Data found");
+      console.log("Historic Data found");
       var count = data.length;
       var responses="";
          $("#responses span").html(count);
@@ -204,7 +204,7 @@ function highlightMatchedWords(message){
   var words = message.split(" ");
   for(word in words){
 
-    if(words[word] in allMatchedWords){
+    if((words[word] in allMatchedWords) || (words[word].toLowerCase() in allMatchedWords) ){
       words[word] = '<mark>'+words[word]+'</mark>'
     }
     newmsg = newmsg+" "+words[word]+" ";
@@ -231,12 +231,12 @@ function main(){
                 springLength : 10,
                 springCoeff : 0.0010,
                 dragCoeff : 0.02,
-                gravity : -0.01
+                gravity : -0.001
             });
 
             // Set custom nodes appearance
             var graphics = Viva.Graph.View.svgGraphics();
-            nodeSize = 32;
+            nodeSize = 24;
             try{
             graphics.node(function(node) {
                    // The function is called every time renderer needs a ui to display node
